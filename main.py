@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 import time
 
 
-# оставьте браузер открытым (помогает диагностировать проблемы в случае сбоя сценария).
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
 
@@ -62,7 +61,7 @@ while True:
 
         driver.find_element(by=By.ID, value=to_purchase_id).click()
 
-        # Add another 5 seconds until the next check
+    
         timeout = time.time() + 5
 
     # Добавьте еще 5 секунд до следующей проверки.
